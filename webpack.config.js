@@ -9,6 +9,7 @@ module.exports = {
     // lugar al que saldrán todos los archivos
     path: path.resolve(__dirname, "dist"), //en nuestro path, crea la carpeta dist
     filename: "bundle.js", // nombre del archivo js resultante
+    publicPath: '/'
   },
   resolve: {
     // extensión de archivos a tomar en cuenta
@@ -56,6 +57,7 @@ module.exports = {
     }),
   ],
   devServer: {
+    historyApiFallback: true,
     allowedHosts: path.join(__dirname, 'dist'),
     port: 3005,
   }
